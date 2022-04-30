@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,207 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+:root {
+    --colHeadding: hsl(180, 100%, 16%);
+    --que: hsl(180, 100%, 22%);
+    --leftArea: hsl(169, 29%, 45%);
+    --leftAre: hsl(180, 100%, 80%);
+}
+
+#root {
+    font-family: "JetBrains Mono", monospace;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.right-area {
+    z-index: -1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 80vh;
+    background-color: rgb(250, 255, 254);
+    padding: 10vh 5vw;
+}
+
+.left-area {
+    position: relative;
+    width: 40vw;
+    height: 80vh;
+    background-color: rgb(195, 222, 217);
+    padding: 10vh 5vw;
+}
+
+.headding {
+    font-size: 30px;
+    font-weight: bolder;
+    /* color: springgreen; */
+    color: rgb(0, 81, 81);
+}
+
+.que {
+    white-space: pre-line;
+    color: rgb(0, 113, 113);
+}
+
+.ans {
+    animation: ansShow 0.4s ease forwards;
+    color: rgb(81, 0, 0);
+}
+
+@keyframes ansShow {
+    0% {
+        /* transform: scale(0.5); */
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        /* transform: scale(1); */
+        opacity: 1;
+    }
+}
+
+.box {
+    /* color: white; */
+    padding: 5px;
+    word-break: break-all;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    background-color: #ffa500;
+    border-radius: 10px;
+    width: 175px;
+    height: 175px;
+    border: 2px black solid;
+}
+
+.corrAnsText {
+    position: absolute;
+    color: green;
+    bottom: 40px;
+    animation: corrAns 1s ease infinite, corrAnsSlide 0.4s ease forwards;
+}
+
+@keyframes corrAnsSlide {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes corrAns {
+    0% {
+        color: green;
+    }
+    50% {
+        color: rgb(0, 189, 0);
+    }
+    100% {
+        color: green;
+    }
+}
+
+
+/* <!-- HTML !--> */
+
+
+/* <button class="button-30" role="button">Button 30</button> */
+
+
+/* CSS */
+
+.button-30 {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    /* height: 48px; */
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding: 10px 15px;
+    /* padding-left: 16px;
+    padding-right: 16px; */
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+.nextQue {
+    position: absolute;
+    right: 35px;
+    bottom: 35px;
+}
+
+ol {
+    /* background: #ff9999; */
+    background-color: var(--leftArea);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+ol li {
+    /* border-radius: 10px; */
+    background: rgb(250, 255, 254);
+    color: #36395A;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ol li::marker {
+    color: rgb(255, 255, 255);
+}
+
+input {
+    font-size: 1rem;
+    width: 85%;
+    color: #36395A;
+    /* font-family: ; */
+    font-family: "JetBrains Mono", monospace;
+}
+
+.inputAreaMainDiv {
+    /* transition: all ease 0.4s; */
 }
