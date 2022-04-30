@@ -1,4 +1,4 @@
-export default [{
+const temp = [{
         id: 0,
         que: "Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.\nIn CSS, a color can be specified by using a predefined color name. \n\nSet the color propety of given Div to White colour.",
         ans: "color: white;",
@@ -34,3 +34,4 @@ export default [{
         ans: "border: 20px dashed white;",
     }
 ]
+export default temp;

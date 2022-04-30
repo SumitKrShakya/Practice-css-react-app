@@ -46,7 +46,9 @@ function LeftArea(props) {
           let result = tt[0].toUpperCase() + tt.substr(1, tt.length);
           tempPropArr += result;
         }
+        return(null)
       });
+      console.log(cssprop,toggleShowAnsButton);
       console.log(tempPropArr);
       // property = tempPropArr
     }
